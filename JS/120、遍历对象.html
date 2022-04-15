@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 便利对象
+        var obj = {
+            name: 'pink',
+            age: 18,
+            sex: '男',
+            fn: function() {}
+        }
+        console.log(obj.name);
+        console.log(obj.age);
+        console.log(obj.sex);
+        // 一个个输出比较麻烦  for in 遍历我们的对象
+        // for(变量 in 对象) {
+
+        // }
+        for (var k in obj) {
+            console.log(k); // k 变量 输出 得到的是  属性名
+            console.log(obj[k]); // obj[k] 得到的是  属性值
+        }
+        // 我们使用 for in 里面的变量  我们喜欢写 k  或者 key
+        // 也可以遍历里面的方法  只是用的比较少
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 利用函数封装  翻转任意一个数组
+        // 方法一
+        function flipArray(numArray) {
+            var temp = 0;
+            for (var i = 0; i < numArray.length / 2; i++) {
+                temp = numArray[i];
+                numArray[i] = numArray[numArray.length - 1 - i];
+                numArray[numArray.length - 1 - i] = temp;
+            }
+            return numArray;
+        }
+        var arr = [3, 2, 1, 4, 5];
+        var res = flipArray(arr);
+        console.log(res);
+        // 方法二
+        function reverse(newArr) {
+            var arr1 = [];
+            for (var i = newArr.length - 1; i >= 0; i--) {
+                arr1[arr1.length] = newArr[i];
+            }
+            return arr1;
+        }
+        var arr2 = [1, 2, 3, 4, 5];
+        var re = reverse(arr2);
+        console.log(re);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

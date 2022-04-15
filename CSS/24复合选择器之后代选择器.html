@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器之后代选择器</title>
+    <style>
+        /* 把ol里面的li变成pink */
+        
+        ol li {
+            color: pink;
+        }
+        
+        ol li a {
+            color: red;
+            text-decoration: none;
+        }
+        /* 两个ul 并且其中好几个a标签 用类标签复合 */
+        
+        .nav li a {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>我是ol</li>
+        <li>我是ol</li>
+        <li>我是ol</li>
+        <li>
+            <a href="#">我是孙子</a>
+        </li>
+    </ol>
+    <ul>
+        <li>我是ul</li>
+        <li>我是ul</li>
+        <li>我是ul</li>
+        <li><a href="#">30天学会web开发</a></li>
+    </ul>
+</body>
+<ul class="nav">
+    <li>我是ul</li>
+    <li>我是ul</li>
+    <li>我是ul</li>
+    <li><a href="#">30天学会web开发</a></li>
+    <li><a href="#">30天学会web开发</a></li>
+    <li><a href="#">30天学会web开发</a></li>
+    <li><a href="#">30天学会web开发</a></li>
+</ul>
+</body>
+
+</html>

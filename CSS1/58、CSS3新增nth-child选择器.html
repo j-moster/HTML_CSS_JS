@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新增nth-child选择器</title>
+    <style>
+        /* 选择所有偶数的孩子 */
+        
+        ul li:nth-child(even) {
+            background-color: #ccc;
+        }
+        /* 选择所有奇数的孩子 */
+        
+        ul li:nth-child(odd) {
+            background-color: grey;
+        }
+        /* :nth-child(n) 从0开始 每次加1 往后面计算 这里面必须是n 不能是其他字母 */
+        /* ol li:nth-child(n) {
+            background-color: skyblue;
+        } */
+        /* :nth-child(2n) 从0开始 将所有偶数的孩子选择出来 */
+        
+        ol li:nth-child(2n) {
+            background-color: yellow;
+        }
+        /* :nth-child(2n+1) 从0开始 将所有奇数的孩子选择出来 */
+        
+        ol li:nth-child(2n+1) {
+            background-color: palegreen;
+        }
+        /* :nth-child(5n) 将5的倍数的孩子全部选择出来 */
+        /* :nth-child(n+5) 从第5个开始包括第5个到最后一个 */
+        /* :nth-child(-n+5) 前5个 包含第5个 */
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+    <ol>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ol>
+</body>
+
+</html>

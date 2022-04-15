@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手风琴</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        .king {
+            width: 852px;
+            background: url(images/bg.png) no-repeat;
+            margin: 100px auto;
+            overflow: hidden;
+            padding: 10px;
+        }
+        
+        .king ul li {
+            float: left;
+            position: relative;
+            width: 69px;
+            height: 69px;
+            margin-right: 10px;
+        }
+        
+        .king ul .current {
+            width: 224px;
+        }
+        
+        .king ul .current .big {
+            display: none;
+        }
+        
+        .king ul .current .small {
+            display: block;
+        }
+        
+        .big {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 69px;
+            height: 69px;
+            border-radius: 5px;
+        }
+        
+        .small {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+    </style>
+    <script src="js/jQuery.js"></script>
+</head>
+
+<body>
+    <div class="king">
+        <ul>
+            <li class="current">
+                <img src="images/m1.jpg" alt="" class="big">
+                <img src="images/m.png" alt="" class="small">
+            </li>
+            <li>
+                <img src="images/c1.jpg" alt="" class="big">
+                <img src="images/c.png" alt="" class="small">
+            </li>
+            <li>
+                <img src="images/h1.jpg" alt="" class="big">
+                <img src="images/h.png" alt="" class="small">
+            </li>
+            <li>
+                <img src="images/l1.jpg" alt="" class="big">
+                <img src="images/l.png" alt="" class="small">
+            </li>
+            <li>
+                <img src="images/t1.jpg" alt="" class="big">
+                <img src="images/t.png" alt="" class="small">
+            </li>
+            <li>
+                <img src="images/w1.jpg" alt="" class="big">
+                <img src="images/w.png" alt="" class="small">
+            </li>
+            <li>
+                <img src="images/z1.jpg" alt="" class="big">
+                <img src="images/z.png" alt="" class="small">
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function() {
+            $("ul li").hover(function() {
+                // 1、当前小 li 宽度变为224px，同时里面的小图片淡出，大图片淡入
+                $(this).stop().animate({
+                    width: 224
+                }).find(".big").stop().fadeOut().siblings(".small").stop().fadeIn();
+                // 2、其余兄弟小li宽度变为69px，小图片淡入，大图片淡出
+                $(this).siblings("li").stop().animate({
+                    width: 69
+                }).find(".big").stop().fadeIn().siblings(".small").stop().fadeOut();
+            })
+        })
+    </script>
+</body>
+
+</html>

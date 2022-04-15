@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // js语言的一大特点就是单线程，H5提出web worker标准，允许脚本语言创建多个线程，js出现同步和异步
+        // console.log(1);
+        // setTimeout(function() {
+        //     console.log(3);
+        // }, 1000);
+        // console.log(2);
+        console.log(1);
+        setTimeout(function() {
+            console.log(3);
+        }, 0);
+        console.log(2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片底侧默认空白缝隙的问题</title>
+    <style>
+        /* 有空隙是因为行内块元素和文字的基线对齐 */
+        
+        div {
+            border: 2px solid red;
+        }
+        
+        div img {
+            /* 解决方法一：1. 给图片添加 vertical-align:middle | top| bottom 等。 （提倡使用的） */
+            /* vertical-align: middle; */
+            /* 解决方法二： 2. 把图片转换为块级元素 display: block; */
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div><img src="images/photo01.png" alt=""></div>
+</body>
+
+</html>

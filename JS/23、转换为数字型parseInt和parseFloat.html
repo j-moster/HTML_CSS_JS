@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var age = prompt('请输入您的年龄');
+        // 1、parseInt可以把字符型转换为数值型   整数
+        // console.log(parseInt(age));
+        console.log(parseInt('3.14')); //得到整数 3
+        console.log(parseInt('3.96')); //得到整数 3 不进位
+        console.log(parseInt('120px')); //会去掉px这个单位，后面跟的其他也一样
+        console.log(parseInt('afc234df')); //NaN,字母开头的不行，必须数字开头
+        // 2、parseFloat 将字符串类型转换为浮点型数值 得到小数 浮点数
+        console.log(parseFloat('3.14')); //得到小数 3.14
+        console.log(parseFloat('3.96')); //得到小数 3.96
+        console.log(parseFloat('120px')); //得到 120 会去掉这个单位
+        console.log(parseFloat('afc234df')); //NaN
+        // 3、利用Number(变量)
+        var vari = '123';
+        console.log(Number(vari)); // 123
+        console.log(Number('12')); // 12
+        // 4、利用算数运算 - * / 隐士转换
+        console.log('123' - 0);
+        console.log('123' - '120');
+        console.log('123' * 1);
+        console.log('123' / 1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

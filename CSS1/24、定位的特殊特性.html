@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位的特殊特性</title>
+    <style>
+        /* 绝对定位和固定定位也和浮动类似。
+        1. 行内元素添加绝对或者固定定位，可以直接设置高度和宽度。
+        2. 块级元素添加绝对或者固定定位，如果不给宽度或者高度，默认大小是内容的大小。 */
+        /* 浮动元素、绝对定位(固定定位）元素的都不会触发外边距合并的问题。 */
+        
+        span {
+            position: absolute;
+            margin-top: 300px;
+            width: 100px;
+            height: 100px;
+            background-color: #f5ff;
+        }
+        
+        div {
+            position: absolute;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <span>124</span>
+    <div>明明如月，何时可掇？</div>
+</body>
+
+</html>

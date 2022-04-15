@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // continue 关键字 退出本次 (当前次的循环)  继续执行剩下次数的循环
+        for (var i = 1; i <= 5; i++) {
+            if (i == 3) {
+                continue;
+            }
+            console.log('这是第' + i + '个包子');
+        }
+        // 1、求1~100之间，所有能被7整除之外的整数和
+        var sum = 0;
+        for (var j = 1; j <= 100; j++) {
+            if (j % 7 == 0) {
+                continue;
+            }
+            sum += j;
+        }
+        console.log(sum);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

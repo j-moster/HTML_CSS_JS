@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 400px;
+            margin: 100px auto;
+        }
+        
+        img {
+            width: 350px;
+        }
+        
+        label {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            border: 1px solid #ccc;
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="images/x.gif" alt="">
+        <label for="">X</label>
+    </div>
+    <script>
+        // 1、获取元素
+        var div = document.querySelector('div');
+        var btn = document.querySelector('label');
+        // 2、注册事件，程序处理
+        btn.onclick = function() {
+            div.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

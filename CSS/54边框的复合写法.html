@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>边框的复合写法</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            /* 边框的复合写法 原则上是没有顺序的 但是一般按照这个顺序 */
+            /* border: 5px solid pink; */
+            /* border-top: 5px solid red;
+            border-bottom: 5px solid blue;
+            border-left: 5px solid blue;
+            border-right: 5px solid blue; */
+            border: 5px solid blue;
+            /* 层叠性 只层叠了上边框 */
+            border-top: 5px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

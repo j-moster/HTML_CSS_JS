@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 对象字面量创建对象
+        var computer = {
+            color: 'grey',
+            weight: 2,
+            brand: 'ASUS',
+            type: '笔记本',
+            skill: function() {
+                console.log('看电影');
+                console.log('听音乐');
+                console.log('打游戏');
+                console.log('敲代码');
+            }
+        }
+        console.log(computer.weight);
+        console.log(computer['brand']);
+        computer.skill();
+        // 利用new object 创建对象
+        var button = Object(); //空对象
+        button.height = 10;
+        button.width = 5;
+        button.click = function() {
+            console.log('点击');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

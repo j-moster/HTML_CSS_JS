@@ -1,0 +1,55 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 2793699 */
+  src: url('iconfont.woff2?t=1630927531636') format('woff2'),
+       url('iconfont.woff?t=1630927531636') format('woff'),
+       url('iconfont.ttf?t=1630927531636') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bluetoothoff:before {
+  content: "\e697";
+}
+
+.icon-bluetoothon:before {
+  content: "\e698";
+}
+
+.icon-settings:before {
+  content: "\e699";
+}
+
+.icon-conversation:before {
+  content: "\e69b";
+}
+
+.icon-nosignal:before {
+  content: "\e69e";
+}
+
+.icon-search:before {
+  content: "\e6e1";
+}
+
+.icon-paymentlife:before {
+  content: "\e6e2";
+}
+
+.icon-togo:before {
+  content: "\e6e3";
+}
+
+.icon-mark:before {
+  content: "\e6eb";
+}
+
+.icon-hot:before {
+  content: "\e6ec";
+}
+

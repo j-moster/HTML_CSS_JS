@@ -1,0 +1,115 @@
+.nav {
+    height: 45px;
+    border-bottom: 2px solid #b1191a;
+    /* 之前设置右边字体的时候，行高高于实际的高度，目的为了字体下方一样高，这里隐藏是为了不影响下边盒子 */
+    overflow: hidden;
+}
+
+.spike_list {
+    float: left;
+}
+
+.spike_list ul li {
+    float: left;
+}
+
+.spike_list ul li a {
+    display: block;
+    font-size: 16px;
+    line-height: 45px;
+    padding: 0 30px;
+    font-weight: 700;
+    color: #000;
+}
+
+.spike_content {
+    float: left;
+}
+
+.spike_content ul li {
+    float: left;
+}
+
+.spike_content ul li a {
+    display: block;
+    font-size: 14px;
+    line-height: 47px;
+    padding: 0 20px;
+}
+
+.spike_content ul li:last-child a::after {
+    content: '\e91d';
+    font-family: 'icomoon';
+    vertical-align: middle;
+}
+
+.spike_content {
+    float: left;
+}
+
+.spike {
+    position: absolute;
+    left: 190px;
+    top: 40px;
+    border-left: 1px solid #e70012;
+    padding: 3px 0 0 14px;
+}
+
+.list ul li {
+    float: left;
+    overflow: hidden;
+    width: 284px;
+    height: 500px;
+    border: 1px solid transparent;
+    /* background-color: skyblue; */
+}
+
+.list ul li:hover {
+    border: 1px solid #e70012;
+}
+
+.list ul li p {
+    font-size: 14px;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.list ul li span {
+    font-size: 18px;
+    margin-left: 15px;
+    color: #e70012;
+}
+
+.list ul li del {
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.list ul li i {
+    padding-left: 10px;
+}
+
+.list ul li .schedule {
+    display: inline-block;
+    width: 150px;
+    height: 15px;
+    border-radius: 7px;
+    vertical-align: middle;
+    border: 1px solid #e70012;
+}
+
+.list ul li .schedule .border {
+    width: 87%;
+    height: 15px;
+    background-color: #e70012;
+}
+
+.list ul li button {
+    margin-left: 40px;
+    width: 200px;
+    height: 50px;
+    background-color: #e70012;
+    color: #fff;
+    margin-top: 25px;
+}

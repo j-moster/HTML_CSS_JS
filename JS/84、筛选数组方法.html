@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 声明一个新的数组用于存放新数据。
+        // 遍历原来的数组， 找出大于等于 10 的元素。
+        // 依次追加给新数组 newArr。
+        // 方法一
+        var arr1 = [];
+        var arr2 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        var j = 0;
+        for (var i = 0; i < arr2.length; i++) {
+            if (arr2[i] > 10) {
+                arr1[j++] = arr2[i];
+            }
+        }
+        console.log(arr1);
+        // 方法二
+        var arr1 = [];
+        var arr2 = [2, 0, 6, 1, 77, 0, 52, 0, 25, 7];
+        // 刚开始arr2.length就是0，会自动检测数组的长度 
+        for (var i = 0; i < arr2.length; i++) {
+            if (arr2[i] > 10) {
+                arr1[arr2.length] = arr2[i];
+            }
+        }
+        console.log(arr1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

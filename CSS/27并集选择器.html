@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器之并集选择器</title>
+    <style>
+        /* 要求一将熊大熊二变为pink色 */
+        /* div,
+        span {
+            color: pink;
+        } */
+        /* 要求二将熊大熊二以及小猪一家变为pink色 */
+        
+        div,
+        span,
+        .pig li {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div>熊大</div>
+    <span>熊二</span>
+    <p>光头强</p>
+    <ul class="pig">
+        <li>小猪佩奇</li>
+        <li>猪爸爸</li>
+        <li>猪妈妈</li>
+    </ul>
+</body>
+
+</html>

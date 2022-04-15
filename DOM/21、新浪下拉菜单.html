@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 300px;
+            margin: 100px auto;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        ul li {
+            float: left;
+            width: 50px;
+            height: 30px;
+            padding: 0 5px;
+            font-size: 16px;
+            line-height: 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        ul li:hover {
+            background-color: #eee;
+        }
+        
+        ul li ul li {
+            float: none;
+        }
+        
+        ul li ul {
+            position: absolute;
+            top: 40px;
+            left: 0px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li id="hot">热门</li>
+            <li class="onmouse">
+                <ul>
+                    <li>副一</li>
+                    <li>副二</li>
+                </ul>
+            </li>
+            <li>同城</li>
+            <li class="onmouse">
+                <ul>
+                    <li>副一</li>
+                    <li>副二</li>
+                </ul>
+            </li>
+            <li>抗疫</li>
+            <li>明星</li>
+        </ul>
+    </div>
+    <script>
+        // 1、获取元素
+        var hot = ducument.getElememtByid('.hot');
+        var onmouse = document.getElementById('onmouse');
+        // 2、注册事件 程序处理
+        hot.onmouse = function() {
+            onmouse.style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

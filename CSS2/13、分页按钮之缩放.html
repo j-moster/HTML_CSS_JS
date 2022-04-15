@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>分页按钮之缩放</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul li {
+            list-style: none;
+        }
+        
+        .box {
+            width: 900px;
+            height: 80px;
+            border: 1px solid #ccc;
+        }
+        
+        .box ul li {
+            float: left;
+            width: 50px;
+            height: 50px;
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            color: #000;
+            margin: 10px;
+            transition: all .4s;
+            overflow: hidden;
+        }
+        
+        .box ul li:hover {
+            transform: scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ul>
+    </div>
+</body>
+
+</html>

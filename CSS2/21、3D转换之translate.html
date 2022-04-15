@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* transform: translateX(100px); */
+            /* transform: translateY(100px); */
+            /* transform: translateX(100px) translateY(100px) translateZ(100px); */
+            /* 1、translateZ沿着Z轴移动 */
+            /* 2、translateZ后面的单位我们一般跟px */
+            /* 3、translateZ(100px)向外移动100px （我们的眼睛方向为正） */
+            /* 4、3D移动简写的方法 */
+            /* transform: translate3d(x, y, z); */
+            /* transform: translate3d(100px, 100px, 100px); */
+            /* 5、XYZ不能省略 如果没有就写0 */
+            transform: translate3d(0, 100px, 100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

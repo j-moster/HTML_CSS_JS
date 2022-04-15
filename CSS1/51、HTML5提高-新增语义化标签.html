@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html5提高-新增语义化标签</title>
+    <style>
+        .clearfix:after {
+            visibility: hidden;
+            clear: both;
+            display: block;
+            content: ".";
+            height: 0
+        }
+        
+        .clearfix {
+            *zoom: 1
+        }
+        
+        header {
+            width: 800px;
+            height: 100px;
+            background-color: skyblue;
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+        
+        nav {
+            width: 800px;
+            height: 100px;
+            background-color: skyblue;
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+        
+        div {
+            width: 800px;
+            margin: auto;
+        }
+        
+        article {
+            float: left;
+            width: 380px;
+            height: 250px;
+            background-color: skyblue;
+            border-radius: 15px;
+            margin: 15px auto;
+            margin-right: 40px;
+        }
+        
+        section {
+            width: 100px;
+            height: 50px;
+            background-color: green;
+        }
+        
+        aside {
+            float: left;
+            width: 380px;
+            height: 250px;
+            background-color: skyblue;
+            border-radius: 15px;
+            margin: 15px auto;
+        }
+        
+        footer {
+            width: 800px;
+            height: 100px;
+            background-color: skyblue;
+            border-radius: 15px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header>头部标签</header>
+    <nav>导航标签</nav>
+    <div class="clearfix">
+        <article>
+            内容标签
+            <section>定义文档某个区域</section>
+        </article>
+        <aside>侧边栏标签</aside>
+    </div>
+
+    <footer>尾部标签</footer>
+</body>
+
+</html>

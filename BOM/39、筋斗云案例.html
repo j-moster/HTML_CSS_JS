@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        body {
+            background-color: #ccc;
+        }
+        
+        .nav {
+            position: relative;
+            width: 1000px;
+            height: 42px;
+            margin: 100px auto;
+            line-height: 42px;
+            border-radius: 5px;
+            background: #fff url(images/rss.png) no-repeat right center;
+        }
+        
+        .nav ul {
+            position: absolute;
+        }
+        
+        .nav ul li {
+            float: left;
+            width: 83px;
+            line-height: 42px;
+            text-align: center;
+        }
+        
+        .nav li a {
+            color: #333;
+            display: inline-block;
+            height: 42px;
+            text-decoration: none;
+        }
+        
+        ul li a:hover {
+            color: white;
+        }
+        
+        .cloud {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 83px;
+            height: 42px;
+            background: url(images/cloud.gif) no-repeat;
+        }
+    </style>
+    <script src="js/animate.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            var cloud = document.querySelector('.cloud');
+            var nav = document.querySelector('.nav');
+            var lis = nav.querySelectorAll('li');
+            var current = 0;
+            for (var i = 0; i < lis.length; i++) {
+                // (1)、鼠标经过时当前小li的位置作为目标值
+                lis[i].addEventListener('mouseenter', function() {
+                    animate(cloud, this.offsetLeft);
+                });
+                // (2)、鼠标离开时就回到起始的位置
+                lis[i].addEventListener('mouseleave', function() {
+                    animate(cloud, current);
+                });
+                // (3)、当我们鼠标点击时，就把当前位置作为目标值
+                lis[i].addEventListener('click', function() {
+                    current = this.offsetLeft;
+                });
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div class="nav">
+        <span class="cloud"></span>
+        <ul>
+            <li>
+                <a href="#" class="current">首页新闻</a>
+            </li>
+            <li>
+                <a href="#" class="current">师资力量</a>
+            </li>
+            <li>
+                <a href="#" class="current">活动策划</a>
+            </li>
+            <li>
+                <a href="#" class="current">企业文化</a>
+            </li>
+            <li>
+                <a href="#" class="current">招聘信息</a>
+            </li>
+            <li>
+                <a href="#" class="current">前端学习</a>
+            </li>
+            <li>
+                <a href="#" class="current">公司简介</a>
+            </li>
+            <li>
+                <a href="#" class="current">帮助中心</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

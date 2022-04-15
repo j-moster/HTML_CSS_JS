@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ul>
+    <ol>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+        <li>我是li</li>
+    </ol>
+    <script>
+        // DOM提供的方法 (API)获取
+        var ul = document.querySelector('ul');
+        var lis = ul.querySelector('li');
+        // 1、子节点 childNodes 所有的子节点 包含 元素节点 文本节点等等
+        console.log(ul.childNodes);
+        console.log(ul.childNodes[0].nodeType);
+        console.log(ul.childNodes[1].nodeType);
+        // 如果想要获得里面的元素节点，需要专门函数的处理
+        // 2、parentNode.children(非标准) 获取所有的子元素节点，也是我们开发中实际常用的
+        console.log(ul.children);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        body {
+            background-color: black;
+        }
+        
+        div {
+            width: 630px;
+            height: 395px;
+            margin: 100px auto 0;
+            padding: 10px 0 0 10px;
+            border: 1px solid #fff;
+            overflow: hidden;
+        }
+        
+        div ul li {
+            float: left;
+            width: 200px;
+            height: 186px;
+            margin: 0 10px 10px 0;
+        }
+    </style>
+    <script src="js/jQuery.js"></script>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li>
+                <img src="images/01.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/02.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/03.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/04.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/05.jpg" alt="">
+            </li>
+            <li>
+                <img src="images/06.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+    <script>
+        $(function() {
+            $("ul li").hover(function() {
+                // 鼠标进入的时候，其他的li标签透明度：0.5
+                $(this).siblings().stop().fadeTo(400, 0.4);
+            }, function() {
+                // 鼠标离开的时候，其他li透明度改为1
+                $(this).siblings().stop().fadeTo(400, 1);
+            })
+        })
+    </script>
+</body>
+
+</html>

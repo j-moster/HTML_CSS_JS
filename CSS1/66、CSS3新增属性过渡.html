@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新增属性过渡</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            background-color: skyblue;
+            /* transition: 变化的属性 花费的时间 运动曲线 何时开始 */
+            /* 如果想写多个属性，利用逗号进行分割 */
+            /* 也可以直接写all 一般用all更简洁 */
+            /* transition: width 1s ease .5s, height 1s ease .5s; */
+            transition: all 1s ease .5s;
+        }
+        
+        .box:hover {
+            width: 300px;
+            height: 300px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

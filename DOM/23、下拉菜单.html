@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav {
+            background-color: #eee;
+            width: 400px;
+            height: 40px;
+            margin: 0 auto;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        ul li {
+            float: left;
+            line-height: 40px;
+            text-align: center;
+            position: relative;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #000;
+            display: block;
+            padding: 0 10px;
+        }
+        
+        a:hover {
+            color: #fff;
+            background-color: #666;
+        }
+        
+        ul li ul li {
+            float: none;
+            background-color: #eee;
+        }
+        
+        ul li ul {
+            position: absolute;
+            left: 0px;
+            top: 40px;
+            display: none;
+        }
+        
+        ul li ul li a:hover {
+            background-color: blue;
+        }
+        
+        ul li:hover ul {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        function showSecondLeave(li) {
+            var Li = li.getElementsByTagName('ul')[0]
+            Li.style.display = "block"
+        }
+
+        function hideSecondLeave(li) {
+            var Li = li.getElementsByTagName('ul')[0]
+            Li.style.display = "none"
+        }
+    </script>
+    <div class="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li onmouseover="showSecondLeave(this)" onmouseout="hideSecondLeave(this)"><a href="#">第二页</a>
+                <ul>
+                    <li><a href="#">副一</a></li>
+                    <li><a href="#">副二</a></li>
+                </ul>
+            </li>
+            <li onmouseover="showSecondLeave(this)" onmouseout="hideSecondLeave(this)"><a href="#">第三页</a>
+                <ul>
+                    <li><a href="#">副一</a> </li>
+                    <li><a href="#">副二</a></li>
+                    <li><a href="#">副三</a></li>
+                </ul>
+            </li>
+            <li><a href="#">第四页</a></li>
+            <li><a href="#">第五页</a></li>
+        </ul>
+    </div>
+</body>
+
+
+</html>

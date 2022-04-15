@@ -1,0 +1,68 @@
+.logo {
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 1px solid #b1191a;
+}
+
+.register {
+    height: 485px;
+    /* background-color: skyblue; */
+}
+
+.register .nav {
+    margin-top: 20px;
+    height: 40px;
+    background-color: #ececec;
+    line-height: 40px;
+}
+
+.register .nav h4 {
+    float: left;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 15px;
+}
+
+.register .nav p {
+    float: right;
+    font-size: 14px;
+    margin-right: 15px;
+}
+
+.register .nav p a {
+    color: #b1191a;
+}
+
+.register .information {
+    margin-top: 40px;
+}
+
+.register .information ul li {
+    text-align: center;
+    font-size: 14px;
+    color: #6e6e6e;
+    margin-top: 30px;
+}
+
+.register .information ul li p {
+    display: inline-block;
+    color: #b1191a;
+}
+
+.register .information ul .size input {
+    outline: none;
+    width: 240px;
+    height: 35px;
+}
+
+.register .information ul .top {
+    margin-top: 50px;
+}
+
+.register .information ul li button {
+    width: 200px;
+    height: 30px;
+    background-color: #b1191a;
+    color: #fff;
+    margin-top: 40px;
+}

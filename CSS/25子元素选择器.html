@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器之资源素选择器</title>
+    <style>
+        div>a {
+            /* 子元素选择器中只会选择作为某一元素的最近一级子元素，简单理解就是亲儿子 */
+            color: red;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <a href="#">我是儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+</body>
+
+</html>

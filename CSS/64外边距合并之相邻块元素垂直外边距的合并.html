@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相邻块元素垂直外边距的合并</title>
+    <style>
+        .damao,
+        .ermao {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        .damao {
+            /* 相邻的两个块级元素相遇时，上下元素均有外边距，margin-bottom margin-top ,
+            则他们的垂直距离是较大者，不是两者之和 */
+            /* 尽量只给一个盒子添加margin值 */
+            margin-bottom: 50px;
+        }
+        
+        .ermao {
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="damao">1</div>
+    <div class="ermao">2</div>
+</body>
+
+</html>

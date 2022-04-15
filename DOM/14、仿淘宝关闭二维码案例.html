@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 160px;
+            height: 180px;
+            margin: 0 auto;
+            font-size: 14px;
+            text-align: center;
+            color: orange;
+            border: 1px solid #ccc;
+            display: block;
+        }
+        
+        .box img {
+            width: 160px;
+            margin-top: 5px;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: -1px;
+            left: -16px;
+            width: 14px;
+            height: 14px;
+            color: grey;
+            border: 1px solid #ccc;
+            line-height: 14px;
+            text-align: center;
+            font-family: Arial, Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        淘宝二维码
+        <i class="close-btn">x</i>
+        <img src="images/tao.png" alt="" id="pic">
+    </div>
+    <script>
+        // 1、获取元素
+        var box = document.getElementsByClassName('box');
+        // var box = document.querySelector('.box');
+        var btn = document.querySelector('.close-btn');
+        // 2、注册事件，程序处理
+        btn.onclick = function() {
+            // 这里class类加上数组索引的原因是，可能具有多个类，不唯一，所以需要加上数组索引确认是哪一个 
+            box[0].style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

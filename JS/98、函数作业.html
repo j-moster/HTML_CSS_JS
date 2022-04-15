@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1、简易计算器
+        function getCalculator() {
+            var num = prompt('欢迎使用简易计算器：' + '\n' + '1、加法运算' + '\n' + '2、减法运算' + '\n' + '3、乘法运算' + '\n' + '4、除法运算' + '\n' + '5、退出' + '\n' + '请输入您的选项：');
+            var num1 = prompt('请输入第一个数据：');
+            var num2 = prompt('请输入第二个数据：');
+            switch (parseInt(num)) {
+                case 1:
+                    var result = parseFloat(num1) + parseFloat(num2);
+                    alert('运算结果是：' + result);
+                    break;
+                case 2:
+                    var result = parseFloat(num1) - parseFloat(num2);
+                    alert('运算结果是：' + result);
+                    break;
+                case 3:
+                    var result = parseFloat(num1) * parseFloat(num2);
+                    alert('运算结果是：' + result);
+                    break;
+                case 4:
+                    var result = parseFloat(num1) / parseFloat(num2);
+                    alert('运算结果是：' + result);
+                    break;
+                default:
+                    break;
+            }
+            return result;
+        }
+        // getCalculator();
+        // 2、函数输出两个数的最大值
+        function getMax(num1, num2) {
+            return num1 > num2 ? num1 : num2;
+        }
+        console.log(getMax(1, 2));
+        // 3、函数比较三个数中的最大值
+        function numMax(num1, num2, num3) {
+            if (num1 > num2) {
+                if (num1 > num3) {
+                    alert('最大值是：' + num1);
+                    return num1;
+                } else {
+                    alert('最大值是：' + num3);
+                    return num3;
+                }
+            } else {
+                if (num2 > num3) {
+                    alert('最大值是：' + num2);
+                    return num2;
+                } else {
+                    alert('最大值是：' + num3);
+                    return num3;
+                }
+            }
+        }
+        // numMax(1, 15, 7);
+        // 4、写一个函数，判断一个数是否为素数
+        function primeNum(num) {
+            for (var i = 2; i < num - 1; i++) {
+                if (num % i == 0) {
+                    alert(num + '是素数');
+                    return num;
+                } else {
+                    alert(num + '不是素数')
+                    return num;
+                }
+            }
+        }
+        primeNum(5);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

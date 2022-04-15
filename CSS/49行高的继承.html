@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>行高的继承</title>
+    <style>
+        body {
+            color: pink;
+            /* 这个1.5 就是当前元素文字大小 font-size 的1.5倍 所以当前的行高为 20*1.5=30px */
+            font: 20px/1.5 Microsoft Yaihei;
+        }
+        
+        p {
+            /* p没有设置行高 会继承父类的行高 14*1.5=21px */
+            font-size: 14px;
+        }
+        /* li 没有手动指定文字的大小 则会继承父类的文字大小 body 20px 所有li 的文字大小为20px 行高为30px */
+    </style>
+</head>
+
+<body>
+    <div>粉色的回忆</div>
+    <p>粉色的回忆</p>
+    <ul>
+        <li>这个不是粉色的</li>
+    </ul>
+
+</body>
+
+</html>

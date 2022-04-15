@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布局技巧-三角巧妙应用</title>
+    <style>
+        .box {
+            width: 0;
+            height: 0;
+            border-top: 50px solid blue;
+            border-right: 50px solid red;
+            border-left: 50px solid green;
+            border-bottom: 50px solid palegreen;
+        }
+        
+        .box1 {
+            width: 0;
+            height: 0;
+            border-top: 100px solid transparent;
+            border-right: 50px solid red;
+            /* border-left: 50px solid green; */
+            /* border-bottom: 50px solid palegreen; */
+        }
+        
+        .box2 {
+            width: 0;
+            height: 0;
+            border-color: transparent red transparent transparent;
+            border-style: solid;
+            border-width: 22px 8px 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>

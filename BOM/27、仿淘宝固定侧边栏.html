@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .w {
+            width: 1200px;
+            margin: auto;
+        }
+        
+        .header {
+            height: 150px;
+            background-color: blue;
+        }
+        
+        .banner {
+            height: 300px;
+            background-color: green;
+        }
+        
+        .main {
+            height: 600px;
+            background-color: red;
+        }
+        
+        .footer {
+            height: 400px;
+            background-color: yellow;
+        }
+        
+        .slider-bar {
+            position: absolute;
+            left: 50%;
+            top: 300px;
+            margin-left: 600px;
+            width: 50px;
+            height: 150px;
+            background-color: skyblue;
+        }
+        
+        span {
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="slider-bar">
+        <span>返回顶部</span>
+    </div>
+    <div class="header w">头部区域</div>
+    <div class="banner w">banner区域</div>
+    <div class="main w">主体部分</div>
+    <div class="footer w">底部区域</div>
+    <script>
+        // 1、获取元素
+        var sliderbar = document.querySelector('.slider-bar');
+        var banner = document.querySelector('.banner');
+        var sliderbarTop = sliderbar.offsetTop - banner.offsetTop;
+        var back = document.querySelector('span');
+        var main = document.querySelector('.main');
+        // 2、页面滚动事件 scroll
+        window.addEventListener('scroll', function() {
+            // window.pageYOffset 页面被卷去的头部
+            // window.pageXOffset 页面被卷去的左侧
+            // console.log(window.pageYOffset);
+            // 3、当我们页面被卷去的头部大于等于了300时 侧边栏就改为固定定位
+            if (window.pageYOffset >= banner.offsetTop) {
+                sliderbar.style.position = 'fixed';
+                sliderbar.style.top = sliderbarTop + 'px';
+            } else {
+                sliderbar.style.position = 'absolute';
+                sliderbar.style.top = '300px';
+            }
+            // 4、当我们页面滚动到main主体时，back模块显示
+            if (window.pageYOffset >= main.offsetTop) {
+                back.style.display = 'block';
+            } else {
+                back.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>为元素使用场景之字体图标</title>
+    <style>
+        @font-face {
+            font-family: 'icomoon';
+            src: url('fonts/icomoon.eot?lcwq76');
+            src: url('fonts/icomoon.eot?lcwq76#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?lcwq76') format('truetype'), url('fonts/icomoon.woff?lcwq76') format('woff'), url('fonts/icomoon.svg?lcwq76#icomoon') format('svg');
+            font-weight: normal;
+            font-style: normal;
+            font-display: block;
+        }
+        
+        div {
+            position: relative;
+            width: 200px;
+            height: 35px;
+            border: 1px solid red;
+        }
+        
+        div::after {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: 'icomoon';
+            /* content: ''; */
+            content: '\ea43';
+            font-size: 20px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

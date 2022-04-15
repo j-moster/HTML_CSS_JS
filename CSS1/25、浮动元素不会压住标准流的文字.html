@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>浮动的元素不会压住标准流的文字</title>
+    <style>
+        .box {
+            /* 浮动的元素不会压住标准流的盒子 最初的目的就是文字环绕 */
+            /* 浮动元素不同，只会压住它下面标准流的盒子，但是不会压住下面标准流盒子里面的文字（图片）
+            但是绝对定位（固定定位） 会压住下面标准流所有的内容。
+            浮动之所以不会压住文字，因为浮动产生的目的最初是为了做文字环绕效果的。 文字会围绕浮动元素 */
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+        
+        .nav {
+            position: absolute;
+            top: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="nav"></div>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+    <p>dadadaadadadaa,扶摇直上九万里</p>
+</body>
+
+</html>

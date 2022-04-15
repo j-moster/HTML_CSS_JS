@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器之链接伪类选择器</title>
+    <style>
+        /* 1、未访问的链接 把没有点击过的链接选出来 */
+        
+        a:link {
+            color: black;
+            text-decoration: none;
+        }
+        /* 2、访问过的链接 把点击过的链接选择出来 */
+        
+        a:visited {
+            color: rgb(245, 22, 22);
+        }
+        /* 3、选择鼠标经过的链接 */
+        
+        a:hover {
+            color: blue;
+        }
+        /* 4、选择鼠标按下还未松开的链接 */
+        
+        a:active {
+            color: orange;
+        }
+        /* 四个顺序不能变 LVHA */
+    </style>
+</head>
+
+<body>
+    <a href="#">天天学习</a>
+    <a href="#">百度</a>
+</body>
+
+</html>

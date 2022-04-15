@@ -1,0 +1,52 @@
+.list ul li {
+    float: left;
+    width: 283px;
+    height: 500px;
+    /* background-color: skyblue; */
+}
+
+.list ul li p {
+    font-size: 14px;
+    margin-left: 15px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.list ul li span {
+    font-size: 18px;
+    margin-left: 15px;
+    color: #e70012;
+}
+
+.list ul li del {
+    font-size: 14px;
+    padding: 0 5px;
+}
+
+.list ul li i {
+    padding-left: 10px;
+}
+
+.list ul li .schedule {
+    display: inline-block;
+    width: 150px;
+    height: 15px;
+    border-radius: 7px;
+    vertical-align: middle;
+    border: 1px solid #e70012;
+}
+
+.list ul li .schedule .border {
+    width: 87%;
+    height: 15px;
+    background-color: #e70012;
+}
+
+.list ul li button {
+    margin-left: 40px;
+    width: 200px;
+    height: 50px;
+    background-color: #e70012;
+    color: #fff;
+    margin-top: 25px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角边框的使用</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* border-radius的四个角写发与padding和margin的写法一样 可以顺时针写 */
+        
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* border-radius: 100px; */
+            /* 50%就是宽度和高度的一半 等价于100px */
+            border-radius: 50%;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 50px;
+        }
+        
+        .radius {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 一个属性设置四个角，两个设置对角 */
+            border-radius: 20px 60px 100px;
+        }
+        
+        .box3 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 左上角 */
+            /* border-top-left-radius: 10px; */
+            /* 右下角 */
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>1、圆形的做法</h4>
+    <div class="box1"></div>
+    <h4>2、圆角矩阵的做法 </h4>
+    <div class="box2"></div>
+    3、可以设置不同的圆角
+    <div class="radius"></div>
+    4、可以单独设置一个角
+    <div class="box3"></div>
+</body>
+
+</html>

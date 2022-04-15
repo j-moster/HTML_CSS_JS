@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border: 1px solid #ccc;
+        }
+        
+        .pic {
+            width: 400px;
+        }
+        
+        .mask {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            background-color: yellow;
+            opacity: .4;
+            cursor: move;
+        }
+        
+        .big {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 410px;
+            width: 500px;
+            height: 500px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+        
+        .big img {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="images/b3.png " class="pic" alt="">
+        <div class="mask"></div>
+        <div class="big">
+            <img src="images/big.jpg" alt="" class="bigImg">
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function() {
+            var box = document.querySelector('.box');
+            var mask = document.querySelector('.mask');
+            var big = document.querySelector('.big');
+            // 1、当我们鼠标经过 box 就显示和隐藏 mask 遮罩层 和 big 大盒子
+            box.addEventListener('mouseover', function() {
+                mask.style.display = 'block';
+                big.style.display = 'block';
+            });
+            box.addEventListener('mouseout', function() {
+                mask.style.display = 'none';
+                big.style.display = 'none';
+            });
+            // 2、鼠标移动的时候，让黄色的盒子跟着鼠标来走
+            box.addEventListener('mousemove', function(e) {
+                // (1)先计算处鼠标在盒子内的坐标
+                var x = e.pageX - this.offsetLeft;
+                var y = e.pageY - this.offsetTop;
+                // (2)盒子高度的一半是150
+                // (3) 我们mask移动的距离
+                var maskX = x - mask.offsetWidth / 2;
+                var maskY = y - mask.offsetHeight / 2;
+                var maskMax = box.offsetWidth - mask.offsetWidth;
+                // (4) 如果 x坐标小于了0 就让他停在0的位置
+                if (maskX <= 0) {
+                    maskX = 0;
+                } else if (maskX >= maskMax) {
+                    maskX = maskMax;
+                }
+                if (maskY <= 0) {
+                    maskY = 0;
+                } else if (maskY >= maskMax) {
+                    maskY = maskMax;
+                }
+                mask.style.left = maskX + 'px';
+                mask.style.top = maskY + 'px';
+                // 3、大图移动的距离 = 遮罩层移动的距离 * 大图最大移动距离 / 遮罩层的最大移动距离
+                // 大图
+                var bigImg = document.querySelector('.bigImg');
+                // 大图最大移动距离
+                var bigMax = bigImg.offsetWidth - big.offsetWidth;
+                // 大图的移动距离 x y
+                var bigX = maskX * bigMax / maskMax;
+                var bigY = maskY * bigMax / maskMax;
+                bigImg.style.left = -bigX + 'px';
+                bigImg.style.top = -bigY + 'px';
+            });
+
+        });
+        //  外部js代码引入方法 <script src='路径'> /script
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1、变量更新
+        var myname = '刘德华';
+        console.log(myname);
+        myname = '迪丽热巴';
+        console.log(myname);
+        // 2、声明多个变量
+        var age = 30,
+            address = '木叶村',
+            tel = 120;
+        console.log(age);
+        console.log(address);
+        console.log(tel);
+        // 3、声明变量的特殊情况
+        // 3.1 只声明，不赋值 程序也不知道里面存的是啥 所以结果是 undefined
+        var gz;
+        console.log(gz);
+        // 3.2不声明 不赋值 直接使用某个变量会报错的
+        // console.log(phone);
+        // JS是执行一句代码 JS引擎翻译一句，报错就不会继续执行下去
+        // 3.3 不声明 只赋值 可以使用但是不推荐 不要使用
+        erji = 1000;
+        console.log(erji);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

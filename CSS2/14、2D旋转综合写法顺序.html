@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all .5s;
+        }
+        
+        div:hover {
+            /* 我们有位移和其他属性时，需要把位移放在最前面，旋转会改变坐标轴位置 */
+            /* transform: translate(150px, 50px) rotate(180deg) scale(1.5); */
+            transform: rotate(180deg) translate(150px, 50px) scale(1.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

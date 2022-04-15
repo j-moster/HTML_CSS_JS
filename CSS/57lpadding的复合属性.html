@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>padding的复合属性</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 5px solid blue;
+            background: pink;
+            /* 四个内边距都是5px */
+            /* padding: 5px; */
+            /* 上下内边距是5px，左右内边距是10px */
+            /* padding: 5px 10px; */
+            /* 上内边距是5px 左右内边距是10px 下内边距是20px */
+            /* padding: 5px 10px 20px; */
+            /* 按照顺时针 上右下左分别为 5 10 20 30 */
+            padding: 5px 10px 20px 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>盒子模型内边距padding四种不同的方式</div>
+
+</body>
+
+</html>

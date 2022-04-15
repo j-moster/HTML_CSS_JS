@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消失的边界线</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            width: 300px;
+            padding: 0;
+            background-color: #eee;
+            overflow: hidden;
+            margin: 50px auto;
+        }
+        
+        ul li {
+            float: left;
+            width: 99px;
+            line-height: 30px;
+            text-align: center;
+            list-style: none;
+            font-size: 18px;
+            color: grey;
+            /* 设置右边框 */
+            border-right: 1px solid #999;
+            margin-bottom: 10px;
+        }
+        
+        ul li:nth-child(3n) {
+            border-right: none;
+        }
+        
+        ul li:last-child {
+            border-right: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li>测试</li>
+        <li>消失</li>
+        <li>边界线</li>
+        <li>右侧</li>
+        <li>边界线</li>
+        <li>消失</li>
+        <li>测试</li>
+    </ul>
+</body>
+
+</html>

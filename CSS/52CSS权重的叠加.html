@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS权重的叠加</title>
+    <style>
+        /* 复合选择器 权重叠加问题 */
+        
+        li {
+            /* 权重= 0,0,0,1 */
+            color: blue;
+        }
+        
+        ul li {
+            /* 权重= 0,0,0,1 + 0，0,0，1 = 0,0,0,2 */
+            color: red;
+        }
+        
+        .nav li {
+            /* 权重= 0,0,1,0 + 0,0,0,1 =0,0,1,1 */
+            color: pink;
+        }
+        /* 注意 就算是十个标签选择器相加，权重为 0,0,0,10 还是比 0,0,1,0 权重小 
+        从左往右 一位一位比较 哪位大 后面直接不需要比较了，权重没有进位 */
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>to be or not to be</li>
+        <li>不忘初心，方得始终</li>
+        <li>to be or not to be</li>
+    </ul>
+
+</body>
+
+</html>

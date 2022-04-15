@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css三大特性之优先级</title>
+    <style>
+        div {
+            color: red!important;
+        }
+        
+        .nav {
+            color: pink;
+        }
+        
+        #demo {
+            color: purple;
+        }
+        /* 选择器              权重
+        继承或者*通配符      0,0,0,0
+        标签选择器           0,0,0,1
+        类，伪类选择器       0,0,1,0
+        id选择器             0,1,0,0
+        行内样式             1,0,0,0
+        !important           无穷大 
+        权重越来越大*/
+    </style>
+</head>
+
+<body>
+    <div class="nav" id="demo" style="color: blue">优先级（权重）</div>
+</body>
+
+</html>

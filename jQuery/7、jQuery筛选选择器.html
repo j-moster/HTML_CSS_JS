@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jQuery.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>筛选选择器</li>
+        <li>筛选选择器</li>
+        <li>筛选选择器</li>
+        <li>筛选选择器</li>
+        <li>筛选选择器</li>
+        <li>筛选选择器</li>
+    </ul>
+    <ol>
+        <li>前端开发，键盘敲烂</li>
+        <li>前端开发，键盘敲烂</li>
+        <li>前端开发，键盘敲烂</li>
+        <li>前端开发，键盘敲烂</li>
+        <li>前端开发，键盘敲烂</li>
+        <li>前端开发，键盘敲烂</li>
+    </ol>
+    <script>
+        $(function() {
+            $("ul li:first").css("color", "red");
+            $("ul li:last").css("color", "pink");
+            $("ul li:eq(2)").css("color", "green");
+            $("ol li:odd").css("color", "red");
+            $("ol li:even").css("color", "blue");
+        })
+    </script>
+</body>
+
+</html>

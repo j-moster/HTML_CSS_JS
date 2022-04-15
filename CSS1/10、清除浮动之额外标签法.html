@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动之额外标签法</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box li {
+            list-style: none;
+        }
+        
+        .box .blue {
+            width: 300px;
+            height: 300PX;
+            background-color: blue;
+            float: left;
+        }
+        
+        .box .red {
+            width: 300px;
+            height: 400PX;
+            background-color: red;
+            float: left;
+        }
+        
+        .box .yellow {
+            width: 200px;
+            height: 200PX;
+            background-color: yellow;
+            float: left;
+        }
+        
+        .box {
+            width: 900px;
+            border: 3px solid red;
+            /* height: 300px; */
+            background-color: pink;
+            margin: 10px auto;
+        }
+        
+        .last {
+            width: 1500px;
+            height: 200px;
+            background-color: grey;
+        }
+        
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li class="blue">1</li>
+            <li class="red">2</li>
+            <li class="yellow">3</li>
+            <li class="yellow">3</li>
+            <li class="yellow">3</li>
+        </ul>
+        <!-- 额外标签法需新增一个标签，不推荐使用 -->
+        <!-- 额外标签法必须是新增一个块级元素，不能是行内元素 -->
+        <div class="clear"></div>
+    </div>
+
+    <div class="last">标准流盒子</div>
+</body>
+
+</html>

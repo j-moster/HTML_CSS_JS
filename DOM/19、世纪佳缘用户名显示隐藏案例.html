@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            margin: 100px auto;
+        }
+        
+        input {
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="text" value="邮箱/ID/手机号">
+    </div>
+    <script>
+        // 1、获取元素
+        var input = document.querySelector('input');
+        // 2、注册事件，程序处理
+        var flag = 0;
+        input.onfocus = function() {
+            if (this.value === '邮箱/ID/手机号') {
+                this.value = '';
+                this.style.color = '#333';
+            }
+        }
+        input.onblur = function() {
+            if (this.value == '') {
+                this.value = '邮箱/ID/手机号';
+                this.style.color = '#ccc';
+            }
+        }
+    </script>
+</body>
+
+</html>

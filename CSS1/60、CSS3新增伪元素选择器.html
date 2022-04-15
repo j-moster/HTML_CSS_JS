@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3新增伪元素选贼气</title>
+    <style>
+        div {
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+        }
+        /* 伪元素选择器和标签选择器一样 权重为1 */
+        /* before和after创建的都属于行内元素 */
+        
+        div::before {
+            /* 在元素内容前面插入内容 */
+            /* 必须有content属性 */
+            content: '你';
+        }
+        
+        div::after {
+            /* 在元素内容后面插入内容 */
+            /* 必须有content属性 */
+            content: '猪';
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        是
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            position: absolute;
+            top: 150px;
+            left: 0;
+            display: block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn500">btn500</button>
+    <span></span>
+    <script>
+        // 缓动动画函数封装obj目标对象 target目标位置
+        // 思路：
+        // 1、让盒子每次移动的距离慢慢变小，速度就会慢慢落下来
+        // 2、核心算法：（目标位置 - 当前位置） / 10 作为每次移动的距离 步长
+        // 3、停止条件： 让当前盒子的位置等于目标位置 就停止定时器
+        function animate(obj, target) {
+            // 先清除以前的定时器，只保留当前的一个定时器
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function() {
+                // 步长写在定时器里面
+                // 把我们的步长值改为整数 不要出现小数的问题
+                var step = (target - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                } else {
+                    // 步长值改为一个慢慢变小的值 步长公式： （目标位置 - 当前位置） / 10
+                    obj.style.left = obj.offsetLeft + step + 'px';
+                }
+            }, 50)
+        }
+        var span = document.querySelector('span');
+        var btn500 = document.querySelector('.btn500');
+        // 调用函数
+
+        btn500.addEventListener('click', function() {
+            animate(span, 500);
+        });
+        // 匀速动画就是 盒子当前的位置 + 固定的值
+        // 缓动动画就是 盒子当前的位置 + 变化的值
+    </script>
+</body>
+
+</html>

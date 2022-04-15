@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 求数组的最大值 [5,2,99,101,67,77]
+        function getMax(numArray) {
+            var num = numArray[0];
+            for (var i = 1; i < numArray.length; i++) {
+                if (num < numArray[i]) {
+                    num = numArray[i];
+                }
+            }
+            return num;
+        }
+        var arr = [5, 2, 99, 101, 67, 77];
+        // console.log(getMax(arr));
+        // 在我们实际开发中，经常用一个变量来接受 函数的返回结果  使用更简单
+        var res = getMax([5, 2, 99, 101, 67, 77]);
+        console.log(res);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

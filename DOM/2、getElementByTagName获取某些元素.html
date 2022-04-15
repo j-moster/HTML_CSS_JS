@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>键盘敲烂，月入百万1</li>
+        <li>键盘敲烂，月入百万2</li>
+        <li>键盘敲烂，月入百万3</li>
+        <li>键盘敲烂，月入百万4</li>
+        <li>键盘敲烂，月入百万5</li>
+    </ul>
+    <ul id="list">
+        <li>键盘敲烂，月入百万11</li>
+        <li>键盘敲烂，月入百万22</li>
+        <li>键盘敲烂，月入百万33</li>
+        <li>键盘敲烂，月入百万44</li>
+        <li>键盘敲烂，月入百万55</li>
+    </ul>
+    <script>
+        // 返回的是 获取过来元素对象的集合，以伪数组的形式存储的
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        // 2、我们想要依次打印里面的元素对象，可以采取遍历的方式
+        // 得到的元素对象是动态的
+        // 如果获取不到元素，则返回空的伪数组(因为获取不到对象)
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+        // 3、element.getElementByName()  可以得到这个元素里面的某些标签
+        var lists = document.getElementById('list');
+        var nav = lists.getElementsByTagName('li');
+        console.log(nav);
+    </script>
+</body>
+
+</html>

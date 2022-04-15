@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?8b7emy');
+    src: url('../fonts/icomoon.eot?8b7emy#iefix') format('embedded-opentype'), url('../fonts/icomoon.ttf?8b7emy') format('truetype'), url('../fonts/icomoon.woff?8b7emy') format('woff'), url('../fonts/icomoon.svg?8b7emy#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #69BFE5;
+}
+
+ul li {
+    list-style: none;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    /* IE6、7 专有 */
+    *zoom: 1;
+}
+
+header {
+    height: 50px;
+    background-color: #0092D8;
+}
+
+.logo {
+    float: left;
+    width: 130px;
+    height: 47px;
+    background: url(../images/index_service_sprite@2x.png) no-repeat -212px -18px;
+    margin-left: 20px;
+}
+
+.left ul li {
+    float: left;
+    line-height: 50px;
+    padding: 0 25px;
+    list-style: none;
+    font-size: 12px;
+}
+
+.left ul li a:hover {
+    color: #fff;
+}
+
+.right {
+    float: right;
+}
+
+.right ul li {
+    float: left;
+    height: 50px;
+    position: relative;
+}
+
+.right ul li a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+}
+
+.right ul li:nth-child(n+1) a {
+    margin: 15px 20px;
+}
+
+.right ul li input {
+    margin-right: 50px;
+    opacity: 0;
+    text-indent: 3em;
+}
+
+.right ul li:first-child input {
+    width: 20px;
+    height: 50px;
+    transition: all 0.3s ease-in;
+}
+
+.right ul li:hover input {
+    opacity: 1;
+    width: 250px;
+}
+
+.right ul li:hover .search {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/index_sprite.png) no-repeat -66px -215px;
+}
+
+.right ul li .search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../images/index_sprite.png) no-repeat -95px -215px;
+}
+
+.right ul li .phone {
+    background: url(../images/index_sprite.png) no-repeat -123px -215px;
+}
+
+.right ul li .car {
+    background: url(../images/index_sprite.png) no-repeat -145px -215px;
+}
+
+.right ul li .user {
+    background: url(../images/index_sprite.png) no-repeat -36px -215px;
+}
+
+.right ul li:last-child a {
+    margin-right: 0;
+}
+
+.right ul li span {
+    float: right;
+    font-size: 12px;
+    color: #fff;
+    margin-top: 15px;
+    margin-right: 20px;
+}
+
+.footer {
+    height: 20px;
+    background-color: #003B66;
+}
+
+.footer p {
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    line-height: 20px;
+}

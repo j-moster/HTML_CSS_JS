@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.header {
+    height: 100px;
+    background-color: #f3f5f7;
+}
+
+.logo {
+    width: 200px;
+    height: 42px;
+    margin-left: 200px;
+    margin-top: 30px;
+    float: left;
+}
+
+.nav {
+    width: 340px;
+    height: 42px;
+    float: left;
+    margin: 30px 20px;
+}
+
+.nav li {
+    display: inline-block;
+}
+
+.nav a {
+    font-size: 18px;
+    color: #000;
+    line-height: 42px;
+    margin: 0 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.header .search {
+    width: 305px;
+    height: 42px;
+    float: left;
+    margin: 30px 10px;
+}
+
+.search .w {
+    width: 250px;
+    height: 42px;
+}
+
+.search .frame {
+    width: 49px;
+    height: 44px;
+    background-color: #00a4ff;
+    float: right;
+}
+
+.ascend {
+    width: 117px;
+    height: 30PX;
+    margin-top: 35px;
+}
+
+.header div {
+    display: inline-block;
+}
+
+.middle {
+    height: 336px;
+    background-color: #1c036c;
+}
+
+.middle .left {
+    float: right;
+    width: 195px;
+    height: 336px;
+    /* margin-left: 200px; */
+    background: rgba(20, 2, 75, .3);
+}
+
+.left li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.left .zuo {
+    margin-top: 24px;
+    margin-left: 20px;
+}
+
+.left a {
+    /* display: block; */
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 24px;
+}
+
+.middle .right {
+    float: left;
+    width: 900px;
+    height: 334px;
+    background-color: pink;
+}
+
+.right img {
+    width: 100%;
+    height: 100%;
+}
+
+.left a:hover {
+    color: #00b4ff;
+}
+
+.footer {
+    /* width: 1300px; */
+    height: 520px;
+    background-color: #f3f5f7;
+    margin: 0 auto;
+}
+
+.title {
+    width: 1040px;
+    height: 60px;
+    background-color: white;
+    margin-left: 200px;
+}
+
+.title li {
+    list-style: none;
+    display: inline-block;
+}
+
+.title li a {
+    margin-right: 20px;
+    font-size: 14px;
+    margin-left: 20px;
+    line-height: 60px;
+}
+
+.bottom {
+    width: 1040px;
+    height: 640px;
+    background-color: white;
+    margin-left: 200px;
+}
+
+.bottom div {
+    width: 200px;
+    height: 220px;
+    margin-right: 10px;
+    margin-top: 10px;
+    float: left;
+}
+
+.bottom .last {
+    margin-right: 0px;
+}
+
+.bottom img {
+    width: 100%;
+}
+
+.bottom p {
+    font-weight: 400;
+    font-size: 14px;
+    margin: 10px;
+}
+
+.bottom .grade {
+    color: #ffb798;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.bottom .number {
+    color: #999999;
+    font-size: 12px;
+}
+
+.finally {
+    height: 200px;
+    background-color: #fff;
+}
+
+.finally .zuobian {
+    width: 420px;
+    height: 200px;
+    float: left;
+    margin-left: 200px;
+}
+
+.zuobian img {
+    margin-top: 20px;
+}
+
+.zuobian b {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.finally .youbian {
+    width: 620px;
+    height: 200px;
+    float: left;
+}
+
+.finall .app {
+    font-size: 14px;
+    color: #00a4ff;
+    text-align: center;
+}
+
+.youbian dl {
+    float: right;
+    margin-top: 40px;
+    margin-left: 100px;
+}
+
+.youbian dd {
+    font-size: 12px;
+}

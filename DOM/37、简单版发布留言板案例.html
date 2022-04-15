@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        textarea {
+            width: 200px;
+            height: 100px;
+            resize: none;
+            outline: none;
+        }
+        
+        .box {
+            width: 500px;
+            height: 1000px;
+            margin: 100px auto;
+        }
+        
+        ul li {
+            width: 300px;
+            height: 30px;
+            padding: 5px;
+            margin: 15px 0;
+            font-size: 16px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <textarea name="" id=""></textarea>
+        <button>发布</button>
+        <ul></ul>
+    </div>
+    <script>
+        // 1、获取元素
+        var text = document.querySelector('textarea');
+        var button = document.querySelector('button');
+        var ul = document.querySelector('ul');
+        // 2、注册事件
+        button.onclick = function() {
+            if (text.value == '') {
+                alert('您没有输入内容');
+                return false;
+            } else {
+                console.log(text.value);
+                // (1) 创建元素
+                var li = document.createElement('li');
+                // 先有li 才能赋值
+                li.innerHTML = text.value;
+                // (2) 添加元素
+                // ul.appendChild(li);
+                ul.insertBefore(li, ul.children[0]);
+            }
+
+        }
+    </script>
+</body>
+
+</html>

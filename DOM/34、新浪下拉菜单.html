@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .tab {
+            width: 900px;
+            margin: 100px auto;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .list_tab>li {
+            position: relative;
+            float: left;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+            /* padding: 0 10px; */
+        }
+        
+        .list_tab li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+            color: #333;
+        }
+        
+        .list_tab>li>a:hover {
+            background-color: #ccc;
+        }
+        
+        .list_tab li ul {
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            border-left: 1px solid #fecc5b;
+            border-right: 1px solid #fecc5b;
+        }
+        
+        .list_tab ul li {
+            border-bottom: 1px solid #fecc5b;
+        }
+        
+        .list_tab ul li a:hover {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <ul class="list_tab">
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li><a href="#">副页一</a></li>
+                    <li><a href="#">副页二</a></li>
+                    <li><a href="#">副页三</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li><a href="#">副页一</a></li>
+                    <li><a href="#">副页二</a></li>
+                    <li><a href="#">副页三</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li><a href="#">副页一</a></li>
+                    <li><a href="#">副页二</a></li>
+                    <li><a href="#">副页三</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">微博</a>
+                <ul>
+                    <li><a href="#">副页一</a></li>
+                    <li><a href="#">副页二</a></li>
+                    <li><a href="#">副页三</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <script>
+        // 1、获取元素
+        var list_tab = document.querySelector('.list_tab');
+        var lis = list_tab.children; // 得到四个小li
+        console.log(lis);
+        // 2、循环注册事件
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].onmouseover = function() {
+                this.children[1].style.display = 'block';
+            }
+            lis[i].onmouseout = function() {
+                this.children[1].style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

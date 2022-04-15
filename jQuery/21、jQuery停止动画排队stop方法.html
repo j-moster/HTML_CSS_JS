@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .nav {
+            width: 500px;
+            margin: 100px auto;
+        }
+        
+        .nav>li {
+            float: left;
+            position: relative;
+            width: 80px;
+            height: 40px;
+            text-align: center;
+        }
+        
+        .nav li a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 40px;
+            color: #333;
+        }
+        
+        .nav>li ul {
+            position: absolute;
+            display: none;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            border-left: 1px solid #FECC5B;
+            border-right: 1px solid #FECC5B;
+        }
+        
+        .nav>li>a:hover {
+            background-color: #eee;
+        }
+        
+        .nav ul li {
+            border-bottom: 1px solid #FECC5B;
+        }
+        
+        .nav ul li a:hover {
+            background-color: #FFF5DA;
+        }
+    </style>
+    <script src="js/jQuery.js"></script>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="javascript:;">微博</a>
+            <ul class="list">
+                <li><a href="javascript:;">私信</a></li>
+                <li><a href="javascript:;">帮助</a></li>
+                <li><a href="javascript:;">注册</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">微信</a>
+            <ul>
+                <li><a href="javascript:;">私信</a></li>
+                <li><a href="javascript:;">帮助</a></li>
+                <li><a href="javascript:;">注册</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">QQ</a>
+            <ul>
+                <li><a href="javascript:;">私信</a></li>
+                <li><a href="javascript:;">帮助</a></li>
+                <li><a href="javascript:;">注册</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">微米</a>
+            <ul>
+                <li><a href="javascript:;">私信</a></li>
+                <li><a href="javascript:;">帮助</a></li>
+                <li><a href="javascript:;">注册</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script>
+        $(function() {
+            // 鼠标经过
+            // $(".nav>li").mouseover(function() {
+            //         // $(this) jQuery 当前元素 this不要加引号
+            //         // show() 显示元素 hide() 隐藏元素
+            //         $(this).children('ul').slideDown();
+            //     })
+            //     // 鼠标离开
+            // $(".nav>li").mouseout(function() {
+            //         // $(this) jQuery 当前元素 this不要加引号
+            //         // show() 显示元素 hide() 隐藏元素
+            //         $(this).children('ul').slideUp();
+            //     })
+            // 1、事件切换 hover就是鼠标经过和离开的复合写法
+            // $(".nav>li").hover(function() {
+            //         $(this).children("ul").slideDown();
+            //     },
+            //     function() {
+            //         $(this).children("ul").slideUp();
+            //     });
+            // 2、事件切换，hover如果只写一个函数，那么鼠标经过和鼠标离开都会触发这个函数
+            $(".nav>li").hover(function() {
+                // 动画一旦触发就会执行，如果多次触发，就会造成多个动画或者效果排队执行，stop()停止上一次动画执行，消除这种排队现象
+                $(this).children("ul").stop().slideToggle();
+            })
+        })
+    </script>
+</body>
+
+</html>

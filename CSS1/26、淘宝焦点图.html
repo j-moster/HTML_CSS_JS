@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝焦点图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul li {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+        
+        a:hover {
+            /* box-shadow: 4px 3px 3px 2px #000 inset; */
+            background: rgba(0, 0, 0, .5)
+        }
+        
+        .tb-promo {
+            position: relative;
+            top: 100px;
+            width: 520px;
+            height: 280px;
+            background-color: rgb(235, 183, 135);
+            background: url(images/tb.jpg) no-repeat;
+            margin: auto;
+        }
+        /* 并集选择器 集体声明相同的选择器 可以用来简化相同的代码 */
+        
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -20px;
+            width: 30px;
+            height: 40px;
+            background: rgba(0, 0, 0, .1);
+            font-size: 30px;
+            line-height: 40px;
+            text-align: center;
+        }
+        
+        .prev {
+            left: 0;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        
+        .next {
+            /* 如果一个盒子既有left属性又有right属性 默认执行left属性 同理 top和bottom 会先执行top */
+            right: 0;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+        
+        .promo-nav {
+            position: absolute;
+            left: 50%;
+            margin-left: -35px;
+            bottom: 10px;
+            width: 70px;
+            height: 13px;
+            border-radius: 7px;
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        
+        .promo-nav ul li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            border-radius: 4px;
+            margin: 3px;
+            background-color: rgb(255, 255, 255);
+        }
+        
+        .promo-nav .selected {
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tb-promo">
+        <div class="prev">
+            <a href="#">&lt;</a>
+        </div>
+        <div class="next">
+            <a href="#">&gt;</a>
+        </div>
+        <div class="promo-nav">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li class="selected"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

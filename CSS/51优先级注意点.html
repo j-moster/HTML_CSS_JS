@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>优先级注意点</title>
+    <style>
+        .nav {
+            color: red;
+        }
+        
+        p {
+            color: pink;
+        }
+        
+        body {
+            color: green;
+        }
+        
+        a {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <!-- 这里因为继承的权重永远为0 而标签选择器权重为1 所以为pink色 -->
+        <p>优先级权重</p>
+    </div>
+    <!-- a链接是一个特殊的，浏览器默认给了蓝色的 有下划线样式，所以不会继承父类的样式 -->
+    <a href="#">浏览器默认会给a配置样式</a>
+</body>
+
+</html>

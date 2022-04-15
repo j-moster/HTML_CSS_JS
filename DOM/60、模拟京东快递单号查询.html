@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            position: relative;
+            width: 500px;
+            margin: 100px;
+        }
+        
+        .con {
+            display: none;
+            position: absolute;
+            top: -40px;
+            width: 180px;
+            line-height: 20px;
+            font-size: 18px;
+            padding: 5px 0;
+            border: 1px solid rgba(0, 0, 0, .2);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+            color: #333;
+        }
+        
+        .con::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 28px;
+            left: 18px;
+            border: 8px solid #000;
+            border-style: solid dashed dashed;
+            border-color: #fff transparent transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="con">123</div>
+        <input type="search" placeholder="请输入您的快递单号" class="jd">
+    </div>
+    <script>
+        // 快递单号输入内容时，上面的大号字体盒子(con)显示(这里面的字号更大)
+        // 表单检测用户输入：给表单添加键盘事件
+        // 同时把快递单号里面的值(value)获取过来赋值给 con盒子(innerText)作为内容
+        // 如果快递单号里面的内容为空，则隐藏大号字体盒子(con)
+        var con = document.querySelector('.con');
+        var search = document.querySelector('input');
+        // 注意：keydown 和keypress 在文本框里面的特点：他们两个持剑触发时，文字还没有落入文本框中。
+        // 而keyup事件触发时，文字已经落入文本框里面了。
+        search.addEventListener('keyup', function() {
+            if (this.value == '') {
+                con.style.display = 'none';
+            } else {
+                con.style.display = 'block';
+                con.innerText = this.value;
+            }
+        });
+        // 当我们失去焦点时，就隐藏这个con盒子
+        // 当我们获得焦点时，并且文本框内容不为空时，就显示这个con盒子
+        search.addEventListener('blur', function() {
+            con.style.display = 'none';
+        });
+        search.addEventListener('focus', function() {
+            if (this.value !== '') {
+                con.style.display = 'block';
+            }
+        });
+    </script>
+</body>
+
+</html>

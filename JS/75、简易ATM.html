@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 简易ATM 
+        // 里面现存有 100 块钱。
+        // 如果存钱， 就用输入钱数加上先存的钱数, 之后弹出显示
+        // 余额提示框
+        // 如果取钱， 就减去取的钱数，之后弹出显示余额提示框
+        // 如果显示余额，就输出余额
+        // 如果退出，弹出退出信息提示框
+        var balance = 100;
+        var mess = prompt('请输入您要的操作：' + '\n' + '1、存钱' + '\n' + '2、取钱' + '\n' + '3、显示余额' + '\n' + '4、退出');
+        switch (parseFloat(mess)) {
+            case 1:
+                var store = prompt('您需要存的钱数：');
+                balance += parseFloat(store);
+                alert('您的余额为' + balance + '元');
+                break;
+            case 2:
+                var take = prompt('您需要取的钱数：');
+                balance -= parseFloat(take);
+                alert('您的余额为' + balance + '元');
+                break;
+            case 3:
+                alert('您的余额为' + balance + '元');
+                break;
+            case 4:
+                alert('谢谢您的使用');
+                break;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
