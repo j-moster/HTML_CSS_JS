@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 600px;
+            height: 600px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            display: grid;
+            /* grid-template-columns设置列，几个值代表几列，代表相应列的宽度
+            可以是具体值，百分比，fr关键字，auto
+            */
+            /* grid-template-columns: 200px 200px 200px; */
+            /* grid-template-columns: 33.33% 33.33% 33.33%; */
+            /* grid-template-columns: 1fr 2fr 1fr; */
+            /* grid-template-columns: 100px auto 100px; */
+            /* repect函数
+            重复次数
+            第一个参数：代表重复的次数
+            第二个参数：代表列的宽度或行的高度
+            */
+            /* grid-template-columns: repeat(3, 100px); */
+            grid-template-rows: 200px 200px 200px;
+            /* repect函数
+            重复模式
+            第一个参数：代表重复的次数
+            第二个参数：模式
+            */
+            /* grid-template-columns: repeat(3, 50px 100px); */
+            grid-template-columns: 100px 100px 100px;
+            /* 设置行与行之间的距离 */
+            grid-row-gap: 50px;
+            /* 设置列与列之间的距离 */
+            grid-column-gap: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main"></div>
+</body>
+
+</html>

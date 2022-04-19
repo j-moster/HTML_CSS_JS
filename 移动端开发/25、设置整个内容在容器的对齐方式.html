@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .contain {
+            width: 600px;
+            height: 600px;
+            border: 1px solid red;
+            display: grid;
+            margin: 100px auto;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            /* 控制整体网格在容器中对水平对齐方式 */
+            /* justify-content: center; */
+            /* 控制整体网格在容器中对垂直对齐方式 */
+            /* align-content: center; */
+            /* 简写 */
+            place-content: center center;
+        }
+        
+        .items {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+        
+        .items:nth-child(even) {
+            background-color: pink;
+        }
+        
+        .items:nth-child(odd) {
+            background-color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+    </div>
+</body>
+
+</html>

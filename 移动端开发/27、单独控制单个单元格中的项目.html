@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            display: grid;
+            width: 600px;
+            height: 600px;
+            border: 1px solid red;
+            margin: 100px auto;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(3, 200px);
+            justify-items: center;
+            align-items: center;
+        }
+        
+        .items {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        
+        .items:nth-child(1) {
+            /* 单独定义项目在容器中的位置 */
+            align-self: end;
+            justify-self: end;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+    </div>
+</body>
+
+</html>

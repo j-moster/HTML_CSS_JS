@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .contain {
+            width: 600px;
+            height: 600px;
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(3, 200px);
+            margin: 100px auto;
+            /* 控制项目在单元格的水平对齐方式 */
+            /* justify-items: center; */
+            /* 控制项目在单元格的垂直对齐方式 */
+            /* align-items: center; */
+            /* 上面两个值的简写 第一个代表垂直方向，第二个水平方向的*/
+            place-items: center center;
+        }
+        
+        .items {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+    </div>
+</body>
+
+</html>

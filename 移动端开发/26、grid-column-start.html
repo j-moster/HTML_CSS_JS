@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .contain {
+            width: 600px;
+            height: 600px;
+            border: 1px solid red;
+            display: grid;
+            margin: 100px auto;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(3, 200px);
+            /* 控制整体网格在容器中对水平对齐方式 */
+            /* justify-content: center; */
+            /* 控制整体网格在容器中对垂直对齐方式 */
+            /* align-content: center; */
+            /* 简写 */
+            /* place-content: center center; */
+            grid-template-areas: "a b c" "d e f" "g h i";
+        }
+        /* 
+        第一种方法：数字线的方式
+        */
+        /* .items {
+            background-color: lightblue;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 3;
+        } */
+        /* 
+        第二种方式：命名
+        */
+        /* .items {
+            background-color: lightblue;
+            grid-row-start: e-start;
+            grid-row-end: e-end;
+            grid-column-start: e-start;
+            grid-column-end: e-end;
+        } */
+        /* 
+        简写 
+        */
+        /* .items {
+            background-color: red;
+            grid-row: e-start/e-end;
+            grid-column: e-start/e-end;
+        } */
+        /* .items {
+            background-color: red;
+            grid-row: e;
+            grid-column: e;
+        } */
+        
+        .items {
+            background-color: green;
+            grid-area: e;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contain">
+        <div class="items"></div>
+    </div>
+</body>
+
+</html>

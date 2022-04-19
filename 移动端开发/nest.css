@@ -1,0 +1,14 @@
+.header {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+.header a {
+  color: red;
+}
+.header a:hover {
+  color: yellow;
+}
+.nav .logo {
+  color: blue;
+}
