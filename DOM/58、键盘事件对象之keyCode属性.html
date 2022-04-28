@@ -11,12 +11,14 @@
 <body>
     <script>
         // 键盘事件对象中的keyCode属性可以得到相应键的ASCII码值
+        // 注意，现在keyCode已经被弃用，尽量不要使用
         // 1、我们的keyup和keydown 事件不区分字母大小写 a和A得到的都是65
         // 2、我们的keypress 事件区分大小写 a 97 和 A得到的是65
         document.addEventListener('keyup', function(e) {
             // console.log(e);
             console.log('up:' + e.keyCode);
             // 我们可以利用keyCode 返回的ASCII码值来判断用户按下了哪个键
+
             if (e.keyCode === 65) {
                 alert('您按下了a键');
             } else {
