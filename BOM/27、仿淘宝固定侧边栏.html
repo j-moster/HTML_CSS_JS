@@ -18,7 +18,7 @@
         }
         
         .header {
-            height: 150px;
+            height: 170px;
             background-color: blue;
         }
         
@@ -67,6 +67,7 @@
         // 1、获取元素
         var sliderbar = document.querySelector('.slider-bar');
         var banner = document.querySelector('.banner');
+        // sliderbarTop就是当我们侧边栏固定定位之后应该变化的数值
         var sliderbarTop = sliderbar.offsetTop - banner.offsetTop;
         var back = document.querySelector('span');
         var main = document.querySelector('.main');
@@ -76,6 +77,7 @@
             // window.pageXOffset 页面被卷去的左侧
             // console.log(window.pageYOffset);
             // 3、当我们页面被卷去的头部大于等于了300时 侧边栏就改为固定定位
+            // banner.offsetTop是banner盒子往上的的所有高度 也就是被卷去头部的大小
             if (window.pageYOffset >= banner.offsetTop) {
                 sliderbar.style.position = 'fixed';
                 sliderbar.style.top = sliderbarTop + 'px';

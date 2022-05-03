@@ -21,6 +21,7 @@
         var time = 5;
         btn.addEventListener('click', function() {
             btn.disabled = true;
+            // btn.innerHTML = '还剩' + time + '秒';
             var timer = setInterval(function() {
                 if (time == 0) {
                     btn.disabled = false;
@@ -29,7 +30,7 @@
                     time = 5; // 重新开始
                 } else {
                     btn.innerHTML = '还剩' + time + '秒';
-                    --time;
+                    time--;
                 }
             }, 1000);
         });
