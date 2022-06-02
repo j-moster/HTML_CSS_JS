@@ -19,6 +19,7 @@
             // 1、element.prop() 设置或获取固定属性值
             console.log($("a").prop("href"));
             console.log($("a").prop("title"));
+            console.log($("input").prop("checked"));
             $("a").prop("title", "我们都挺好");
             $("input").change(function() {
                 console.log($(this).prop("checked"));

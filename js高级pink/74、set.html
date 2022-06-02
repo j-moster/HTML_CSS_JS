@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Set 数据结构 类似于数组，成员变量时唯一的，没有重复的值
+        // const s1 = new Set();
+        // size 查看里面多少个值
+        // console.log(s1.size);
+        // const s2 = new Set(['a', 'b', 'c']);
+        // console.log(s2.size);
+
+        // 利用set实现数组去重
+        // const s3 = new Set(['a', 'a', 'b', 'b']);
+        // console.log(s3.size);
+        // var arr = [...s3];
+        // console.log(arr);
+
+        // set操作数据的方法
+        const s4 = new Set();
+        // 向set结构中添加值，使用add方法 add方法可以链式编程
+        s4.add('a').add('b');
+        console.log(s4.size);
+        // 从set结构中删除值，用到的方法是delete
+        const r1 = s4.delete('c');
+        console.log(s4.size);
+        console.log(r1);
+        // 判断一个值是否是set数据结构中的成员 使用has
+        const r2 = s4.has('d');
+        console.log(r2);
+        // 清空set数据结构中的值 使用clear方法
+        s4.clear();
+        console.log(s4.size);
+
+        // 遍历set数据结构 从中取值
+        const s5 = new Set(['a', 'b', 'c']);
+        s5.forEach(value => {
+            console.log(value);
+        })
+    </script>
+</body>
+
+</html>

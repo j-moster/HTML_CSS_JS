@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 模板字符串 反引号定义
+        // let name = '张三';
+        // let sayHello = `hello,我的名字是${name}`;
+        // console.log(sayHello);
+
+        // 模板字符串可以换行
+        // let result = {
+        //     name: 'zhangsan',
+        //     age: 20
+        // }
+        // let html = `
+        //     <div>${result.name}</div>
+        //     <div>${result.age}</div>
+        // `;
+        // console.log(html);
+
+        // 模板字符串可以调用函数
+        const fn = () => {
+            return '我是fn函数';
+        }
+        let sayHello = `我是模板字符串，${fn()}`;
+        console.log(sayHello);
+    </script>
+</body>
+
+</html>

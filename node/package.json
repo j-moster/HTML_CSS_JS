@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "body-parser": "^1.20.0",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0",
+    "moment": "^2.22.2"
+  },
+  "devDependencies": {
+    "webpack": "^5.72.1"
+  }
+}

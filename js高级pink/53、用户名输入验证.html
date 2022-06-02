@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .right {
+            color: green;
+        }
+        
+        .wrong {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="" class="uname"> <span>请输入用户名</span>
+    <script>
+        // 量词是设定某个模式出现的次数
+        var reg = /^[a-zA-Z0-9_-]{6,16}$/; // 这个模式用户只能输入英文字母 数字 下划线 短横线但是有边界符和[] 这就限定了只能多选1
+        // {6,16} 中间不要有空格
+        // console.log(reg.test('andy-red')); // true
+        // console.log(reg.test('andy_red')); // true
+        // console.log(reg.test('andyaaa')); // true
+        // console.log(reg.test('andy!red')); // false
+        // console.log(reg.test('andy007')); // true
+        // console.log(reg.test('red')); // false
+        var uname = document.querySelector('.uname');
+        var span = document.querySelector('span');
+        uname.addEventListener('blur', function() {
+            if (reg.test(uname.value)) {
+                console.log('正确的');
+                span.className = 'right';
+                span.innerHTML = '用户名格式输入正确'
+            } else {
+                console.log('输入错误');
+                span.className = 'wrong';
+                span.innerHTML = '用户名格式输入错误';
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* 经典面试题二 */
+        let arr = [];
+        for (let i = 0; i < 2; i++) {
+            arr[i] = function() {
+                console.log(i);
+            }
+        }
+        arr[0](); // 0
+        arr[1](); // 1
+        /* let声明的变量是块级作用域，每次循环都会产生一个块级作用域，每个块级作用域中的变量都是不同的，函数执行输出的是自己的上一级作用域下的值 */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1、导入模板引擎 -->
+    <!-- 在window全局，多一个函数，叫做template（'模板的id'，需要渲染的数据对象） -->
+    <script src="./js/template-web.js "></script>
+    <script src="./js/jquery.js"></script>
+</head>
+
+<body>
+
+    <div class="content"></div>
+    <!-- 3、定义模板 -->
+    <!-- 3.1 模板的html结构 ，必须定义到script中 -->
+    <!-- script标签中默认type属性是 text/javascript 意思将里面的内容当js解析 -->
+    <!-- 现在改为html解析 -->
+    <script type="text/html" id="tpl-user">
+        <!-- {{}} 是art-template提供的占位符，给数据占位-->
+        <h3>{{name}}------- {{age}}</h3>
+        {{@ test}}
+        <div>
+            {{if flag === 0}} flag的值是0 {{else if flag === 1}} flag的值是1 {{/if}}
+        </div>
+        <ul>
+            {{each hobby}}
+            <li>索引号：{{$index}}, 循环项：{{$value}}</li>
+            {{/each}}
+        </ul>
+        <div>当前时间：{{regTime | dataFormat}}</div>
+    </script>
+    <script>
+        template.defaults.imports.dataFormat = function(data) {
+                var y = data.getFullYear();
+                var m = data.getMonth() + 1;
+                var d = data.getDate();
+                // 过滤器最后一定要return一个结果
+                return y + '-' + m + '-' + d;
+            }
+            // 2、定义需要渲染的数据
+        var data = {
+                name: 'zs',
+                age: 18,
+                test: '<h1>我是测试</h1>',
+                flag: 1,
+                hobby: ['吃饭', '睡觉', '写代码'],
+                regTime: new Date()
+            }
+            // 4、调用template函数
+        var htmlStr = template('tpl-user', data);
+        console.log(htmlStr);
+        $('.content').html(htmlStr);
+    </script>
+</body>
+
+</html>

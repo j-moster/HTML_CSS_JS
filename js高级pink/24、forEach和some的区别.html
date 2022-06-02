@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = ['pink', 'green', 'blue', 'red'];
+        // arr.forEach(function(value) {
+        //     if (value == 'green') {
+        //         console.log('找到了该元素');
+        //         return true;
+        //     }
+        //     console.log(11);
+        // })
+        // 如果查找数组中唯一的元素，用some方法更合适
+        // arr.some(function(value) {
+        //     if (value == 'green') {
+        //         console.log('找到了该元素');
+        //         return true;
+        //     }
+        //     console.log(11);
+        // })
+        arr.filter(function(value) {
+            if (value == 'green') {
+                console.log('找到了该元素');
+                return true;
+            }
+            console.log(11);
+        })
+    </script>
+</body>
+
+</html>

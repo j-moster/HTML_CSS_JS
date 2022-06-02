@@ -1,0 +1,1 @@
+console.log('通过了package.json加载了a.js');

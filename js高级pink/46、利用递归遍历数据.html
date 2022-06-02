@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var data = [{
+            id: 1,
+            name: '家电',
+            goods: [{
+                id: 11,
+                gname: '冰箱',
+                goods: [{
+                    id: 111,
+                    gname: '海尔'
+                }, {
+                    id: 112,
+                    gname: '美的'
+                }, ]
+            }, {
+                id: 12,
+                gname: '洗衣机'
+            }]
+        }, {
+            id: 2,
+            name: '服饰',
+            goods: [{
+                id: 21,
+                gname: '森马'
+            }, {
+                id: 22,
+                gname: '安踏'
+            }]
+        }];
+        // 我们想要做输入id号，就可以返回的数据对象
+        // 利用forEach 去遍历里面的每一个对象
+        // 在getId函数内设置o 会出现访问第二个服饰里面里层goods时出现bug，将o提升为全局变量，解决
+        var o = {};
+
+        function getId(json, id) {
+            // var o = {};
+            json.forEach(function(item) {
+                if (item.id == id) {
+                    // console.log(item);
+                    o = item;
+                    // 2、获取里层的数据
+                } else if (item.goods && item.goods.length > 0) {
+                    o = getId(item.goods, id)
+                }
+            })
+            return o;
+        }
+        console.log(getId(data, 1));
+        console.log(getId(data, 2));
+        console.log(getId(data, 11));
+        console.log(getId(data, 12));
+        console.log(getId(data, 111));
+        console.log(getId(data, 112));
+        console.log(getId(data, 21));
+    </script>
+</body>
+
+</html>

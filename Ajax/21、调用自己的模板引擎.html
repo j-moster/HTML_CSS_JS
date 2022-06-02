@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/template.js"></script>
+</head>
+
+<body>
+    <div class="user"></div>
+    <!-- 定义模板结构 -->
+    <script type="text/html" id="tpl-user">
+        <div>姓名：{{ name }}</div>
+        <div>年龄：{{ age}}</div>
+        <div>性别：{{sex}}</div>
+        <div>住址：{{address }}</div>
+        <div>爱好：{{ hobby }}</div>
+    </script>
+    <script>
+        // 定义数据
+        data = {
+            name: 'zhangsan',
+            age: 100,
+            sex: '男',
+            address: '北京顺分去花园小区',
+            hobby: '吃饭'
+        };
+        // 调用模板函数
+        var htmlStr = template('#tpl-user', data);
+        // 渲染html结构
+        document.querySelector('.user').innerHTML = htmlStr;
+    </script>
+</body>
+
+</html>

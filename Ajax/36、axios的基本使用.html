@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/axios.js"></script>
+</head>
+
+<body>
+    <button class="btn1">发起get请求</button>
+    <button class="btn2">发起post请求</button>
+    <button class="btn3">直接使用axios发起GET请求</button>
+    <button class="btn4">直接使用axios发起POST请求</button>
+    <script>
+        document.querySelector('.btn1').addEventListener('click', function() {
+            var url = 'http://www.liulongbin.top:3006/api/get';
+            var paramsObj = {
+                name: 'zs',
+                age: 30
+            };
+            axios.get(url, {
+                params: paramsObj
+            }).then(function(res) {
+                console.log(res.data);
+            })
+        });
+
+        document.querySelector('.btn2').addEventListener('click', function() {
+            var url = 'http://www.liulongbin.top:3006/api/post';
+            var objData = {
+                address: '北京',
+                location: '顺义区'
+            };
+            axios.post(url, objData).then(function(res) {
+                console.log(res.data);
+            })
+        });
+
+        document.querySelector('.btn3').addEventListener('click', function() {
+            var url = 'http://www.liulongbin.top:3006/api/get';
+            var dataparams = {
+                name: '人生',
+                address: '北京'
+            };
+            axios({
+                method: 'GET',
+                url: url,
+                params: {
+                    dataparams
+                }
+            }).then(function(res) {
+                console.log(res.data);
+            })
+        });
+
+        document.querySelector('.btn4').addEventListener('click', function() {
+            axios({
+                method: 'POST',
+                url: 'http://www.liulongbin.top:3006/api/post',
+                data: {
+                    name: '泰坦尼克号',
+                    gender: 'nan'
+                }
+            }).then(function(res) {
+                console.log(res.data);
+            })
+        })
+    </script>
+</body>
+
+</html>

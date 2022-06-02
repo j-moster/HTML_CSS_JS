@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>提交</button>
+    <div></div>
+    <script>
+        // 替换 replace
+        // var str = 'andy和red';
+        // var newstr = str.replace('andy', 'baby');
+        // console.log(newstr);
+        // replace在正则中的使用，过滤敏感词
+        // 三种匹配模式 g：全局匹配  i: 忽略大小写  gi: 全局匹配和忽略大小写
+        var textarea = document.querySelector('textarea');
+        var button = document.querySelector('button');
+        var div = document.querySelector('div');
+        button.addEventListener('click', function() {
+            div.innerHTML = textarea.value.replace(/小学生/g, '**');
+        })
+    </script>
+</body>
+
+</html>

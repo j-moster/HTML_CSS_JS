@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>香蕉</li>
+        <li>栗子</li>
+        <li>哈密瓜</li>
+        <li>生菜</li>
+    </ul>
+    <script>
+        // 闭包应用-3秒之后打印所有小li的内容
+        var lis = document.querySelector('ul').querySelectorAll('li');
+        for (var i = 0; i < lis.length; i++) {
+            (function(i) {
+                setTimeout(function() {
+                    console.log(lis[i].innerHTML);
+                }, 3000)
+            })(i);
+        }
+    </script>
+</body>
+
+</html>

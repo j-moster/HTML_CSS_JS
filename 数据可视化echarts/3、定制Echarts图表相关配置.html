@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+    </style>
+    <script src="./js/echarts.min.js"></script>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        var myChart = echarts.init(document.querySelector(".box"));
+        var option = {
+            color: ["pink", "blue", "green", "yellow", "red"],
+            title: {
+                text: 'Stacked Line'
+            },
+            tooltip: {
+                trigger: 'axis'
+            },
+            legend: {
+                data: ['Email', 'Union Ads', 'Video Ads', 'Direct', 'Search Engine']
+            },
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {}
+                }
+            },
+            xAxis: {
+                type: 'category',
+                boundaryGap: false,
+                data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+            },
+            yAxis: {
+                type: 'value'
+            },
+            series: [{
+                name: 'Email',
+                type: 'line',
+                stack: 'Total1',
+                data: [120, 132, 101, 134, 90, 230, 210]
+            }, {
+                name: 'Union Ads',
+                type: 'line',
+                stack: 'Total2',
+                data: [220, 182, 191, 234, 290, 330, 310]
+            }, {
+                name: 'Video Ads',
+                type: 'line',
+                stack: 'Total3',
+                data: [150, 232, 201, 154, 190, 330, 410]
+            }, {
+                name: 'Direct',
+                type: 'line',
+                stack: 'Total4',
+                data: [320, 332, 301, 334, 390, 330, 320]
+            }, {
+                name: 'Search Engine',
+                type: 'line',
+                stack: 'Total5',
+                data: [820, 932, 901, 934, 1290, 1330, 1320]
+            }]
+        };
+
+        myChart.setOption(option);
+    </script>
+</body>
+
+</html>
